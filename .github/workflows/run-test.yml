@@ -23,9 +23,6 @@ jobs:
       run: |
        echo "$PAYLOAD_CONTEXT"
        output=$(python -m tests.test_nusantara nusantara/nusa_datasets/${{ env.DATASET_NAME }}/${{ env.DATASET_NAME }}.py)
-       output="${output//'%'/'%25'}"
-       output="${output//$'\n'/'%0A'}"
-       output="${output//$'\r'/'%0D'}"
        echo "::set-output name=result::$output"
     - name: Add comment result
       uses: peter-evans/create-or-update-comment@v2
