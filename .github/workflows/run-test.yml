@@ -34,6 +34,6 @@ jobs:
         token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
         issue-number: ${{ github.event.client_payload.pull_request.number }}
         body: |
-        # Run result
-        ${{ steps.nusantara_test.outputs.run_url}}
-        `${{ steps.nusantara_test.outputs.result }}`
+          # Run result
+          ${{ steps.nusantara_test.outputs.run_url}}
+          `${{ steps.nusantara_test.outputs.result }}`
