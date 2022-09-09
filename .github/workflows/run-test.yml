@@ -36,6 +36,4 @@ jobs:
         body: |
         # Run result
         ${{ steps.nusantara_test.outputs.run_url}}
-        ```
-        ${{ steps.nusantara_test.outputs.result }}
-        ```
+        `${{ steps.nusantara_test.outputs.result }}`
