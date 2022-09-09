@@ -26,10 +26,8 @@ jobs:
     - name: Add comment result
       uses: peter-evans/create-or-update-comment@v2
       with:
-        token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
         issue-number: ${{ github.event.client_payload.pull_request.number }}
         body: |
           ### Run result
-          **Status**: ${{ steps.nusantara_test.outcome}}
           Check test log here: ${{ steps.nusantara_test.outputs.run_url}}
 
